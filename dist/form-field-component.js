@@ -1,5 +1,6 @@
 "use strict";
 
+window.globalComponents = window.globalComponents || {};
 var FormFieldComponent = {
   idCounter: 0,
   props: {
@@ -26,7 +27,7 @@ var FormFieldComponent = {
       this.$emit('input', $event.target.value);
     }
   },
-  components: {},
+  components: window.globalComponents,
   template: "\n\t\t<p>\n\t\t\t<label v-bind:for=\"id\">{{label}}</label>\n\t\t\t<input v-bind:id=\"id\" v-bind:value=\"value\" v-bind=\"attributes\" v-on:input=\"onInput\">\n\t\t</p>\n\t"
 };
 /* exported FormFieldComponent */

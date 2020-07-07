@@ -1,3 +1,5 @@
+window.globalComponents = window.globalComponents || {};
+
 const FormComponent = {
 	props: {
 		title: String,
@@ -20,7 +22,7 @@ const FormComponent = {
 			}
 		}
 	},
-	components: {},
+	components: window.globalComponents,
 	template: `
 		<form>
 			<h1 v-if="title">{{title}}</h1>

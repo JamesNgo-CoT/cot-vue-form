@@ -1,3 +1,5 @@
+window.globalComponents = window.globalComponents || {};
+
 const FormFieldComponent = {
 	idCounter: 0,
 	props: {
@@ -24,7 +26,7 @@ const FormFieldComponent = {
 			this.$emit('input', $event.target.value);
 		}
 	},
-	components: {},
+	components: window.globalComponents,
 	template: `
 		<p>
 			<label v-bind:for="id">{{label}}</label>
