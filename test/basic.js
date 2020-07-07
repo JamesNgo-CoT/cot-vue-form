@@ -1,5 +1,4 @@
 /* global Vue */
-/* global BsFormComponent BsFormSectionComponent BsFormFieldComponent */
 /* global FormComponent FormSectionComponent FormFieldComponent */
 
 Object.assign(FormSectionComponent.components, {
@@ -7,13 +6,6 @@ Object.assign(FormSectionComponent.components, {
 });
 Object.assign(FormComponent.components, {
 	'form-section-component': FormSectionComponent
-});
-
-Object.assign(BsFormSectionComponent.components, {
-	'form-field-component': BsFormFieldComponent
-});
-Object.assign(BsFormComponent.components, {
-	'form-section-component': BsFormSectionComponent
 });
 
 new Vue({
@@ -134,8 +126,17 @@ new Vue({
 		}
 	},
 	components: {
-		'form-component': FormComponent,
-		'bs-form-component': BsFormComponent
+		'form-component': FormComponent
 	},
+	template: `
+		<div class="row">
+			<div class="col-sm-8">
+				<form-component v-bind="form" v-bind:data="data"></form-component>
+			</div>
+			<div class="col">
+				<pre>{{ JSON.stringify(data, null, '  ') }}</pre>
+			</div>
+		</div>
+	`,
 	el: '#app'
 });

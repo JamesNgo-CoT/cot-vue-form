@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+	<style>
+		.card {
+			margin-bottom: 1rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div id="app">
+			<form-component v-bind="form" v-bind:data="data"></form-component>
+			<bs-form-component v-bind="form" v-bind:data="data"></bs-form-component>
+			{{data}}
+		</div>
+	</div>
+
+	<script src="../../node_modules/vue/dist/vue.js"></script>
+
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+	<script src="../dist/form-component.js"></script>
+	<script src="../dist/form-section-component.js"></script>
+	<script src="../dist/form-field-component.js"></script>
+
+	<script src="../dist/bs-form-component.js"></script>
+	<script src="../dist/bs-form-section-component.js"></script>
+	<script src="../dist/bs-form-field-component.js"></script>
+
+	<script src="basic_bootstrap.js"></script>
+</body>
+
+</html>
